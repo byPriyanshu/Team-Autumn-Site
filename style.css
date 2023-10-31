@@ -1,0 +1,147 @@
+/* Vendor Prefixs */
+:root{
+    --clr-primary: #FF6B00;
+    --clr-accent: #DEC168;
+    --clr-bg: #EDEDED;
+    --ff-serif: 'PT Serif', serif;
+    --ff-sans: 'PT Sans', sans-serif;
+    
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+/* Box Sizing and Making font-size 10px */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+/* Utility classes */
+.clr-primary{
+    color: var(--clr-primary);
+}
+.clr-accent{
+    color: var(--clr-accent);
+}
+.bg-primary{
+    background-color: var(--clr-primary);
+}
+.bg-accent{
+    background-color: var(--clr-accent);
+}
+.ff-serif{
+    font-family: var(--ff-serif);
+}
+.ff-sans{
+    font-family: var(--ff-sans);
+}
+.fw-regular{
+    font-weight: var(--fw-regular);
+}
+.fw-bold{
+    font-weight: var(--fw-bold);
+}
+
+.flex{ display: flex; }
+.flex-column{ flex-direction: column; }
+.flex-justify-center{ justify-content: center; }
+.flex-align-center{ align-items: center; }
+
+/* Styling */
+
+/**************************** Hero Section **********************/
+
+section.hero{
+    background-color: var(--clr-bg);
+    height: 100vh;
+    width: 100%;
+}
+
+/******************* Left Side *************/
+
+.desc{
+    flex: 1 1 60%;
+    /* padding: 10px 15px; */
+    align-items: center;
+}
+h2{
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 10px 15px;
+}
+p{
+    font-size: 1.2rem;
+    letter-spacing: 0.02rem;
+    text-align: justify;
+    line-height: 1.6rem;
+    padding: 10px 15px;
+}
+.links{
+    margin-top: 20px;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+.links li{
+    list-style-type: none;
+}
+.links li a{
+    color: #484442;
+}
+
+/******************* Right Side ********************/
+
+.image{
+    background: url('Images/pexels-egecan-köse-13878219.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    flex: 1 1 40%;
+}
+
+
+/******************* Media Queries *****************/ 
+@media only screen and (min-width: 230px) and (max-width: 43em){
+    h2{
+        font-size: 3.2rem;
+    }
+    p{
+        font-size: 1.1rem;
+    }
+    .links{
+        padding: 10px 15px;
+    }
+}
+
+
+/***************** Mobile Screens ****************/
+@media only screen and (max-width: 39em){
+    section.hero{
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+    }
+    h2{
+        font-size: 2.1rem;
+    }
+    p{
+        font-size: 1rem;
+        padding-top: 0px;
+        line-height: 1.3rem;
+    }
+    .links{
+        padding: 0.5em 0.8em;
+        position: absolute;
+        bottom: 0;
+        margin-top: 0px;
+        width: 100%;
+    }
+    .links li a{
+        font-size: 0.7rem;
+    }
+    .image{
+        min-height: 150px;
+    }
+}
